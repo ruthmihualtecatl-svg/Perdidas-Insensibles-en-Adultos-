@@ -91,15 +91,45 @@
         max-width: 440px;
         margin: 22px 0 0;
         color: var(--muted);
-        font-size: 1.05rem;
+        font-size: 1.02rem;
         line-height: 1.75;
       }
+
+      .loss-pathways {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+        max-width: 440px;
+        margin-top: 22px;
+      }
+
+      .pathway {
+        min-height: 94px;
+        padding: 14px;
+        border: 1px solid #e1ebe7;
+        border-radius: 15px;
+        background: rgb(255 255 255 / 72%);
+      }
+
+      .pathway-icon {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: #e7f5ef;
+        color: var(--green);
+      }
+
+      .pathway-icon svg { width: 17px; height: 17px; }
+      .pathway p { margin: 0; color: #435b59; font-size: 0.78rem; font-weight: 700; line-height: 1.4; }
 
       .note {
         display: flex;
         gap: 12px;
         max-width: 440px;
-        margin-top: 34px;
+        margin-top: 24px;
         padding: 15px 16px;
         border: 1px solid #e1ebe7;
         border-radius: 14px;
@@ -278,11 +308,25 @@
         <p class="eyebrow">Herramienta de estimación</p>
         <h1 id="page-title">Pérdidas insensibles en adultos</h1>
         <p class="intro">
-          Las pérdidas insensibles son pérdidas continuas de agua que ocurren principalmente mediante la evaporación cutánea no visible y el vapor de agua eliminado por la respiración.
+          Las pérdidas insensibles representan la eliminación continua de agua que no se percibe de forma directa. Se producen principalmente por evaporación cutánea y por la humidificación del aire durante la respiración.
         </p>
+        <div class="loss-pathways" aria-label="Principales vías de pérdida insensible de agua">
+          <div class="pathway">
+            <span class="pathway-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5S6.5 9.7 6.5 14a5.5 5.5 0 0 0 11 0c0-4.3-5.5-10.5-5.5-10.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <p>Evaporación cutánea</p>
+          </div>
+          <div class="pathway">
+            <span class="pathway-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 20v-7m0 0c-1.6-2.7-5-3.5-7-1.5-1.5 1.5-.8 4 1 4.5m6-3c1.6-2.7 5-3.5 7-1.5 1.5 1.5.8 4-1 4.5M12 13c-1-3.5-.5-6.5 1.5-9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <p>Vapor de agua respiratorio</p>
+          </div>
+        </div>
         <aside class="note">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <p>Este resultado es orientativo y no sustituye la valoración de un profesional de la salud.</p>
+          <p>Estimación orientativa; no sustituye la valoración clínica ni considera todas las condiciones que pueden modificar las pérdidas de agua.</p>
         </aside>
       </section>
 
