@@ -50,7 +50,7 @@
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         margin-bottom: 42px;
         color: #385457;
         font-size: 0.88rem;
@@ -59,13 +59,40 @@
       }
 
       .brand-mark {
-        width: 36px;
-        height: 36px;
+        width: 46px;
+        height: 46px;
         display: grid;
         place-items: center;
-        border-radius: 12px;
-        background: #dff3eb;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #dff3eb, #c7ebdd);
         color: var(--green);
+        border: 1px solid rgb(8 127 104 / 12%);
+        box-shadow: inset 0 1px 0 rgb(255 255 255 / 80%);
+        font-size: 0.62rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-copy {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+
+      .brand-name {
+        color: #173d3c;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .brand-subtitle {
+        color: #61807d;
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
       }
 
       .brand-mark svg { width: 21px; height: 21px; }
@@ -309,10 +336,11 @@
     <main class="layout">
       <section class="story" aria-labelledby="page-title">
         <div class="brand">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5S6.5 9.7 6.5 14a5.5 5.5 0 0 0 11 0c0-4.3-5.5-10.5-5.5-10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span>Calculadora de hidratación</span>
+          <div class="brand-mark" aria-label="Logo institucional">RLG</div>
+          <div class="brand-copy">
+            <span class="brand-name">Institución</span>
+            <span class="brand-subtitle">Ruth Lizbeth Mihualtecatl Gutiérrez</span>
+          </div>
         </div>
         <p class="eyebrow">Herramienta de estimación</p>
         <h1 id="page-title">Pérdidas insensibles en adultos</h1>
